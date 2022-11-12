@@ -14,7 +14,6 @@ const AboutUs = () => (
     <div className="app__aboutus-content flex__center">
       <div className="app__aboutus-content__about">
         <h1 className="headtext__cormorant">About Us</h1>
-
         <img src={images.spoon} alt="about_spoon" />
         <p className="p__opensans">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
@@ -25,13 +24,13 @@ const AboutUs = () => (
           Know more
         </button>
       </div>
+
       <div className="app__aboutus-content_knife flex__center">
         <img src={images.knife} alt="about_knife" />
       </div>
 
       <div className="app__aboutus-content__history">
         <h1 className="headtext__cormorant">Our history</h1>
-
         <img src={images.spoon} alt="about_spoon" />
         <p className="p__opensans">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
