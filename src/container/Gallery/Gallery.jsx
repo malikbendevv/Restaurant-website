@@ -59,7 +59,7 @@ const Gallery = () => {
           />
           <BsArrowRightShort
             className="gallery__arrow-icon"
-            onClick={() => scroll("left")}
+            onClick={() => scroll("right")}
           />
         </div>
       </div>
