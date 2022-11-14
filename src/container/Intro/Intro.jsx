@@ -9,6 +9,7 @@ const Intro = () => {
 
   const handleVideo = () => {
     setPlayVideo((prevPlayVideo) => !prevPlayVideo);
+    console.log(playVideo);
     if (playVideo) {
       videoRef.current.pause();
     } else {
@@ -16,7 +17,7 @@ const Intro = () => {
     }
   };
   return (
-    <div className="app__video">
+    <div className="app__video" onClick={handleVideo}>
       <video
         src={meal}
         ref={videoRef}
@@ -25,18 +26,23 @@ const Intro = () => {
         control={false}
         muted
       />
-      <div className="app__video-overlay flex__center ">
+      {!playVideo && (
         <div
-          className="app__video-overlay_circle flex__center "
-          onClick={handleVideo}
+          className="app__video-overlay flex__center " // onClick={handleVideo}
+          // onClick={handleVideo}
         >
-          {playVideo ? (
-            <BsPauseFill color="#fff" fontSize={30} />
-          ) : (
-            <BsFillPlayFill color="#fff" fontSize={30} />
-          )}
+          <div
+            className="app__video-overlay_circle flex__center "
+            // onClick={handleVideo}
+          >
+            {playVideo ? (
+              <BsPauseFill color="#fff" fontSize={30} />
+            ) : (
+              <BsFillPlayFill color="#fff" fontSize={30} />
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
